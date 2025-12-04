@@ -1,3 +1,3 @@
 # OpenHydrology
-一个水利多模态数据集
-working on
+A large-scale multimodal dataset in Hydrology
+Welcome to working together and contributing
