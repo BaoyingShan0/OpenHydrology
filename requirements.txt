@@ -1,0 +1,34 @@
+# 核心依赖
+open-dataflow>=1.0.0
+pyyaml>=6.0
+click>=8.0.0
+
+# 数据处理
+pandas>=2.0.0
+
+# PDF处理
+PyPDF2>=3.0.0
+pdfplumber>=0.7.0
+
+# 文本处理和NLP
+nltk>=3.8
+spacy>=3.4.0
+langdetect>=1.0.9
+
+# 机器学习
+scikit-learn>=1.2.0
+transformers>=4.20.0
+
+# 数据库
+sqlalchemy>=2.0.0
+
+# 可视化
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# 多语言支持
+jieba>=0.42.1
+
+# 工具包
+tqdm>=4.64.0
+loguru>=0.6.0

@@ -1,0 +1,85 @@
+# 水利多模态数据处理配置文件
+
+# 全局设置
+global:
+  log_level: INFO
+  output_dir: ./output
+  temp_dir: ./temp
+  max_workers: 4
+
+# 数据解析器配置
+parser:
+  supported_formats:
+    - pdf
+    - txt
+    - json
+    - csv
+    - md
+  
+  pdf_settings:
+    extract_tables: true
+    extract_images: false
+    ocr_enabled: false
+    min_confidence: 0.8
+  
+  text_settings:
+    encoding_detection: true
+    chunk_size: 1000
+    overlap: 100
+
+# 数据清洗器配置
+cleaner:
+  remove_duplicates: true
+  normalize_whitespace: true
+  remove_special_chars: false
+  min_text_length: 10
+  language_detection: true
+
+# 数据增强器配置
+enhancer:
+  enable_qa_generation: true
+  enable_term_extraction: true
+  enable_knowledge_enrichment: true
+  
+  domain_knowledge:
+    water_resources: true
+    hydrology: true
+    meteorology: true
+    environmental: true
+
+# 数据评估器配置
+evaluator:
+  quality_metrics:
+    - completeness
+    - relevance
+    - consistency
+    - diversity
+  
+  thresholds:
+    min_quality_score: 0.7
+    min_relevance_score: 0.6
+
+# 流程控制器配置
+pipeline:
+  batch_size: 100
+  parallel_processing: true
+  error_handling: skip
+  checkpoint_enabled: true
+  
+# 多语言支持
+languages:
+  supported:
+    - zh
+    - en
+  default: zh
+
+# 数据库配置
+database:
+  type: sqlite
+  path: ./data/hydro_data.db
+  
+# API配置（如果需要）
+api:
+  enable_rest_api: false
+  host: localhost
+  port: 8000
