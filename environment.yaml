@@ -1,0 +1,31 @@
+name: OpenHydrology_data
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+
+  # 用 conda 装这些（稳定、避免编译）
+
+
+  # 这些用 pip 装（绕开 conda 的 imagemagick/pypdfium2 解依赖坑）
+  - pip:
+      - open-dataflow>=1.0.0
+      - langdetect>=1.0.9
+      - transformers>=4.20.0
+      - pdfplumber>=0.7.0
+      - numpy<2.0.0
+      - pandas>=2.0.0
+      - scikit-learn>=1.2.0
+      - matplotlib>=3.5.0
+      - seaborn>=0.11.0
+      - pyyaml>=6.0
+      - click>=8.0.0
+      - sqlalchemy>=2.0.0
+      - tqdm>=4.64.0
+      - loguru>=0.6.0
+      - nltk>=3.8
+      - spacy>=3.4.0
+      - pypdf2>=3.0.0
+      - jieba>=0.42.1
